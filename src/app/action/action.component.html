@@ -1,0 +1,25 @@
+<div>
+    <h2>Add New Action</h2>
+    <form (ngSubmit)="onAddAction()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="name" name="name" required>
+  
+      <label for="objective">Objective:</label>
+      <input type="text" id="objective" [(ngModel)]="objective" name="objective" required>
+
+      <label for="responsible">Responsible:</label>
+      <input type="text" id="beneficiaries" [(ngModel)]="responsible" name="responsible" required>
+  
+      <label for="beneficiaries">Number of Beneficiaries:</label>
+      <input type="number" id="beneficiaries" [(ngModel)]="beneficiaries" name="beneficiaries" required>
+
+      <label for="status">Status:</label>
+      <select id="status" name="status" [(ngModel)]="status" required>
+        <option value="failure">Failure</option>
+        <option value="success">Success</option>
+      </select>
+  
+      <button type="submit">Add Action</button>
+      <button class="back-button" (click)="navigateToActionList()">Back to Action List</button>
+    </form>
+  </div>

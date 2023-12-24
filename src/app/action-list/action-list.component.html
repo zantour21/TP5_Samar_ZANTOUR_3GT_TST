@@ -1,0 +1,21 @@
+<div>
+    <h2>Action List</h2>
+    <ul>
+        <li *ngFor="let action of actions; let i = index">
+            <div>
+                <h3>{{ action.name }}</h3>
+                <p>Objective: {{ action.objective }}</p>
+                <p>Responsible: {{ action.responsible }}</p>
+                <p>Beneficiaries: {{ action.beneficiaries }}</p>
+                <p>Creation Date: {{ action.creationDate }}</p>
+                <p>Status: {{action.isSuccess ? 'Success' : 'Failure' }}</p>
+              </div>
+            <button class="action-button green" (click)="markAsSuccess(action)">Mark as Success</button>
+            <button class="action-button red" (click)="deleteAction(i)">Delete</button>
+        </li> 
+    </ul> 
+
+    <!-- Button to navigate to the add action page -->
+    <button class="action-button" routerLink="/add-action">Add Action</button>
+
+</div>

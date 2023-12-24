@@ -1,0 +1,32 @@
+<div>
+  <h2>Welcome to Our Association's Landing Page</h2>
+  <p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptatibus quod illum labore neque impedit, et ea doloribus quas ipsam, perferendis laboriosam maxime, ipsa eos excepturi ad numquam accusamus est. lor
+  </p>
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa fugiat nulla aut quasi cum a omnis harum quos? Aspernatur esse explicabo fugit quis ducimus sapiente nulla, ad omnis quos libero!
+  </p>
+  <p>
+    Explore our actions and initiatives below to see the positive changes we've made and the ongoing projects that aim to bring about meaningful transformations.
+  </p>
+  <!-- Button to show all actions -->
+  <div class="action-buttons-container">
+    <button class="action-button" (click)="loadActions()">Show All Actions</button>
+  </div>
+
+  <!-- Display actions (conditionally based on actionsVisible) -->
+  <div *ngIf="actionsVisible && actions.length > 0">
+    <h3>Actions:</h3>
+    <ul>
+      <li *ngFor="let action of actions">
+        <div>
+          <h3>{{ action.name }}</h3>
+          <p>Objective: {{ action.objective }}</p>
+          <p>Status: {{ action.isSuccess ? 'Success' : 'Failure' }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <br>
+  </div>
+  
